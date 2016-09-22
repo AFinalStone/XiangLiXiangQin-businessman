@@ -1,0 +1,154 @@
+<com.wei.xianglixiangqin.fragment.SlidingRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeMallFragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titleBarHeight"
+        android:background="@color/colorRed_FFE83821">
+
+        <CheckBox
+            android:id="@+id/cb_location"
+            android:layout_width="65dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingRight="14dp"
+            android:text="杭州站"
+            android:textColor="@color/colorWhite_FFFFFFFF"
+            android:textSize="@dimen/textFontSize_14" />
+
+        <ImageView
+            android:id="@+id/iv_location"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignRight="@id/cb_location"
+            android:layout_alignTop="@id/cb_location"
+            android:layout_marginTop="15dp"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/icon_city_location_select" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout_shopcart"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <ImageView
+                android:id="@+id/btn_search"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/home_top_shopcart" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/action_shopCart"
+                android:textColor="@color/colorWhite_FFFFFFFF"
+                android:textSize="@dimen/textFontSize_10" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_searchContext"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@id/linearLayout_shopcart"
+            android:layout_toRightOf="@id/iv_location"
+            android:background="@drawable/button_shape_inwhite_outred_01"
+            android:gravity="center_vertical"
+            android:hint="请输入商品关键字搜索"
+            android:paddingBottom="0dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="30dp"
+            android:paddingTop="0dp"
+            android:textColor="@color/colorBlack_FF646464"
+            android:textColorHint="@color/colorBlack_FF7E7E7E"
+            android:textSize="@dimen/textFontSize_14" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignRight="@id/et_searchContext"
+            android:layout_alignTop="@id/et_searchContext"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/icon_search_01" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayout_titleBar"
+        android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.daimajia.slider.library.SliderLayout
+            android:id="@+id/sliderLayout_roolView"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            custom:auto_cycle="true"
+            custom:indicator_visibility="visible"
+            custom:pager_animation="Default"
+            custom:pager_animation_span="1100" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tip_nearByMalls"
+            android:textSize="@dimen/textFontSize_14"
+            android:layout_margin="8dp"
+            android:textColor="@color/colorBlack_FF323232"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/dividingLineColor"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/dividingLineColor"/>
+
+        <com.wei.xianglixiangqin.view.TabIndicatorView
+            android:id="@+id/tabIndicatorView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <com.wei.xianglixiangqin.view.ScrollViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+    </ScrollView>
+</com.wei.xianglixiangqin.fragment.SlidingRelativeLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite_FFFFFFFF"
+    tools:context="com.wei.xianglixiangqin.activity.PublishFindActivity">
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/layout_title" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite_FFFFFFFF"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_shape_inred_outwhite_01"
+            android:text="@string/action_queryPublish"
+            android:textColor="@color/colorWhite_FFFFFFFF"
+            android:textSize="@dimen/textFontSize_16" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/linearLayout_bottomBar"
+        android:layout_below="@id/layout_title"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="@string/tv_pleaseFillInMyFindMsg"
+                android:textColor="@color/colorBlack_FF646464"
+                android:textSize="@dimen/textFontSize_16" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/colorGray_FFF2F2F2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="@string/tv_selectClassification"
+                    android:textColor="@color/colorBlack_FF323232"
+                    android:textSize="@dimen/textFontSize_16" />
+
+                <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_arrow_right_02" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/colorGray_FFF2F2F2" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="@string/tv_publishFindContent"
+                android:textColor="@color/colorBlack_FF323232"
+                android:textSize="@dimen/textFontSize_16" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_shape_inwhite_outgray_01"
+                android:gravity="left"
+                android:hint="@string/et_publishFindContent"
+                android:padding="10dp"
+                android:textColor="@color/colorBlack_FF323232"
+                android:textColorHint="@color/colorBlack_FF999999"
+                android:textSize="@dimen/textFontSize_14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="@string/tv_publishFindAddPicture"
+                android:textColor="@color/colorBlack_FF323232"
+                android:textSize="@dimen/textFontSize_16" />
+
+            <com.wei.xianglixiangqin.view.ScrollGridView
+                android:id="@+id/gridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:horizontalSpacing="10dp"
+                android:numColumns="3"
+                android:verticalSpacing="5dp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wei.xianglixiangqin.fragment.FindAndRequestFragment">
+
+
+    <View
+        android:id="@+id/view_divider01"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/dividingLineColor"
+        />
+
+    <TextView
+        android:id="@+id/tv_IndustryClassification"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/IndustryClassification"
+        android:maxLines="1"
+        android:layout_below="@id/view_divider01"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/colorBlack_FF323232"/>
+
+    <ImageButton
+        android:id="@+id/ib_more"
+        android:layout_width="33dp"
+        android:padding="10dp"
+        android:layout_alignTop="@id/tv_IndustryClassification"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:scaleType="centerInside"
+        android:background="@null"
+        android:src="@mipmap/icon_arrow_right_02"/>
+
+    <TextView
+        android:id="@+id/tv_selectClassification"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="互联网 3C 硬件"
+        android:layout_alignTop="@id/tv_IndustryClassification"
+        android:layout_toRightOf="@id/tv_IndustryClassification"
+        android:layout_toLeftOf="@id/ib_more"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="8dp"
+        android:maxLines="1"
+        android:textColor="@color/colorRed_FFE83821"/>
+
+    <View
+        android:id="@+id/view_divider02"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/tv_IndustryClassification"
+        android:background="@color/dividingLineColor"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_below="@id/view_divider02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

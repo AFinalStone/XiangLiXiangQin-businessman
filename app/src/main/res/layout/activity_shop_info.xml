@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wei.xianglixiangqin.activity.ShopInfoActivity">
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/layout_title" />
+
+    <ImageView
+        android:id="@+id/iv_head"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/layout_title"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_find_request_head" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_actionCard"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/layout_title"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_shape_inorange_outwhite_01"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_actionCard"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_exchange_card" />
+
+        <TextView
+            android:id="@+id/tv_actionCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="@string/action_card"
+            android:textColor="@color/colorWhite_FFFFFFFF"
+            android:textSize="@dimen/textFontSize_14" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_toLeftOf="@id/linearLayout_actionAttention"
+        android:layout_toRightOf="@id/iv_head"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="李晓华"
+        android:textColor="@color/colorBlack_FF323232"
+        android:textSize="@dimen/textFontSize_18" />
+
+    <TextView
+        android:id="@+id/tv_shopName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_head"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@id/linearLayout_actionAttention"
+        android:layout_toRightOf="@id/iv_head"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="杭州乡里乡亲科技有限公司"
+        android:textColor="@color/colorBlack_FF646464"
+        android:textSize="@dimen/textFontSize_14" />
+
+    <View
+        android:id="@+id/view_divider01"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/iv_head"
+        android:layout_marginTop="20dp"
+        android:background="@color/dividingLineColor" />
+
+    <TextView
+        android:id="@+id/tv_strongth"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/view_divider01"
+        android:gravity="center"
+        android:text="@string/strongth"
+        android:textColor="@color/colorBlack_FF323232"
+        android:textSize="@dimen/textFontSize_14" />
+
+    <View
+        android:id="@+id/view_divider02"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_strongth"
+        android:background="@color/dividingLineColor" />
+
+    <TextView
+        android:id="@+id/tv_strongthDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_divider02"
+        android:padding="15dp"
+        android:text="优势描述"
+        android:textColor="@color/colorBlack_FF646464"
+        android:textSize="@dimen/textFontSize_12" />
+
+    <View
+        android:id="@+id/view_divider03"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/tv_strongthDesc"
+        android:background="@color/dividingLineColor" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_package"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/view_divider03"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="15dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_shopinfo_shop" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="李晓华的店铺"
+            android:textColor="@color/colorBlack_FF323232"
+            android:textSize="@dimen/textFontSize_14" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout_intoShop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="进入店铺"
+                android:textColor="@color/colorRed_FFE83821"
+                android:textSize="@dimen/textFontSize_16" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_arrow_right_01" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_divider04"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/linearLayout_package"
+        android:background="@color/dividingLineColor" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleView_shopGoods"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/view_divider04" />
+
+    <View
+        android:id="@+id/view_divider05"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/recycleView_shopGoods"
+        android:background="@color/dividingLineColor" />
+
+    <com.wei.xianglixiangqin.view.TabIndicatorView
+        android:id="@+id/tabIndicatorView"
+        android:layout_width="match_parent"
+        android:layout_below="@id/view_divider05"
+        android:layout_height="50dp" />
+
+    <com.wei.xianglixiangqin.view.ScrollViewPager
+        android:id="@+id/viewPager"
+        android:layout_below="@id/tabIndicatorView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

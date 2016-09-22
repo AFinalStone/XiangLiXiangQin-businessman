@@ -1,0 +1,176 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wei.xianglixiangqin.fragment.HomeMessageFragment">
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/layout_title"/>
+
+    <TextView
+        android:id="@+id/tv_myLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/tv_myLocation"
+        android:layout_below="@id/layout_title"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/colorBlack_FF646464"/>
+
+    <ImageButton
+        android:id="@+id/ib_locationRefresh"
+        android:layout_width="50dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_alignTop="@id/tv_myLocation"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:scaleType="centerInside"
+        android:background="@null"
+        android:src="@mipmap/icon_location_refresh"/>
+
+    <TextView
+        android:id="@+id/tv_myLocationDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="杭州市西湖区文三西路黄姑山路宜必思酒店8楼 828"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_alignTop="@id/tv_myLocation"
+        android:layout_toRightOf="@id/tv_myLocation"
+        android:layout_toLeftOf="@id/ib_locationRefresh"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/colorBlack_FF646464"/>
+
+    <View
+        android:id="@+id/view_divider02"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/tv_myLocation"
+        android:background="@color/dividingLineColor"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/linearLayout_fittler"
+        android:layout_below="@id/view_divider02"
+        android:orientation="horizontal">
+
+       <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1">
+
+           <ImageView
+               android:id="@+id/iv_IndustryClass"
+               android:layout_width="20dp"
+               android:layout_height="20dp"
+               android:layout_centerVertical="true"
+               android:layout_alignParentRight="true"
+               android:button="@null"
+               android:gravity="center"
+               android:padding="0dp"
+               android:scaleType="centerInside"
+               android:src="@mipmap/icon_nearbyshop_fittler_unslect" />
+
+           <CheckBox
+               android:id="@+id/cb_IndustryClass"
+               android:layout_width="match_parent"
+               android:layout_height="40dp"
+               android:layout_centerVertical="true"
+               android:layout_toLeftOf="@id/iv_IndustryClass"
+               android:background="@null"
+               android:button="@null"
+               android:gravity="center"
+               android:text="行业分类"
+               android:textColor="@color/colorRed_FFE83821"
+               android:textSize="@dimen/textFontSize_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/iv_businessArea"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="0dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_nearbyshop_fittler_unslect" />
+
+            <CheckBox
+                android:id="@+id/cb_businessArea"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/iv_businessArea"
+                android:background="@null"
+                android:button="@null"
+                android:gravity="center"
+                android:text="商圈"
+                android:textColor="@color/colorRed_FFE83821"
+                android:textSize="@dimen/textFontSize_14" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_distance"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="0dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_nearbyshop_fittler_unslect" />
+
+            <CheckBox
+                android:id="@+id/cb_distance"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/iv_distance"
+                android:background="@null"
+                android:button="@null"
+                android:gravity="center"
+                android:text="距离范围"
+                android:textColor="@color/colorRed_FFE83821"
+                android:textSize="@dimen/textFontSize_14" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_divider03"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/linearLayout_fittler"
+        android:background="@color/dividingLineColor"
+        />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_below="@id/view_divider03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

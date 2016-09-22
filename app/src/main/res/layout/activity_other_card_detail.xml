@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite_FFFFFFFF"
+    tools:context=".activity.OtherCardDetailActivity">
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/layout_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:paddingBottom="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_shape_inwhite_outgray_01"
+                android:elevation="2dp">
+
+                <ImageView
+                    android:id="@+id/iv_head"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:src="@mipmap/icon_find_request_head" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_head"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="李晓华"
+                    android:textColor="@color/colorBlack_FF323232"
+                    android:textSize="@dimen/textFontSize_18" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_jobPosition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CEO"
+                        android:textColor="@color/colorBlack_FF323232"
+                        android:textSize="@dimen/textFontSize_12" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="互联网"
+                        android:textColor="@color/colorBlack_FF323232"
+                        android:textSize="@dimen/textFontSize_12" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_attentionAndFriend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/linearLayout_jobPosition"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/icon_card_attention_num" />
+
+                    <TextView
+                        android:id="@+id/tv_attentionNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="关注：998"
+                        android:textColor="@color/colorBlack_FF323232"
+                        android:textSize="@dimen/textFontSize_12" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/icon_card_friends_num" />
+
+                    <TextView
+                        android:id="@+id/tv_friendNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="好友：998"
+                        android:textColor="@color/colorBlack_FF323232"
+                        android:textSize="@dimen/textFontSize_12" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout_companyDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearLayout_attentionAndFriend"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/iv_companyImage"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="15dp"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/icon_card_company" />
+
+                    <TextView
+                        android:id="@+id/tv_companyName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/iv_companyImage"
+                        android:text="杭州乡里乡亲科技有限公司"
+                        android:textColor="@color/colorBlack_FF323232"
+                        android:textSize="@dimen/textFontSize_14" />
+
+                    <TextView
+                        android:id="@+id/tv_companyPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_companyName"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/iv_companyImage"
+                        android:text="电话：1888888888"
+                        android:textColor="@color/colorBlack_FF646464"
+                        android:textSize="@dimen/textFontSize_12" />
+
+                    <TextView
+                        android:id="@+id/tv_companyAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_companyPhone"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/iv_companyImage"
+                        android:text="地址：浙江省杭州市西湖区文三西路 999号 9楼 928888888"
+                        android:textColor="@color/colorBlack_FF646464"
+                        android:textSize="@dimen/textFontSize_12" />
+
+                </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_actionAttention"
+                android:layout_width="80dp"
+                android:layout_below="@id/relativeLayout_companyDesc"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:background="@drawable/button_shape_inwhite_outorange_01">
+
+                <ImageView
+                    android:id="@+id/iv_actionAttention"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_find_request_attention" />
+
+                <TextView
+                    android:id="@+id/tv_actionAttention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="@dimen/textFontSize_14"
+                    android:textColor="@color/colorOrange_FFFF8623"
+                    android:text="@string/action_attention" />
+
+            </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/dividingLineColor" />
+
+            <TextView
+                android:id="@+id/tv_strongth"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="@string/tv_ourstrong"
+                android:textColor="@color/colorBlack_FF323232"
+                android:textSize="@dimen/textFontSize_14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/dividingLineColor" />
+
+            <TextView
+                android:id="@+id/tv_ourstrongDes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="@string/tv_ourstrong"
+                android:textColor="@color/colorBlack_FF646464"
+                android:textSize="@dimen/textFontSize_12" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
